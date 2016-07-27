@@ -56,54 +56,6 @@ allow kernel asec_image_file:file read;
 
 domain_auto_trans(kernel, init_exec, init)
 
-# Our rules
-
-allow kernel surfaceflinger_service:service_manager { find add };
-
-allow kernel power_service:service_manager { find };
-
-allow kernel cameraproxy_service:service_manager { find };
-
-allow kernel mediaserver_service:service_manager { find add };
-
-allow kernel permission_service:service_manager { find };
-
-allow kernel activity_service:service_manager { find };
-
-allow kernel appops_service:service_manager { find };
-
-allow kernel window_service:service_manager { find };
-
-allow kernel processinfo_service:service_manager { find };
-
-allow kernel scheduling_policy_service:service_manager { find };
-
-allow kernel drmserver_service:service_manager { add };
-
-allow kernel keystore_service:service_manager { add };
-
-allow kernel gatekeeper_service:service_manager { add };
-
-allow kernel batterystats_service:service_manager { find };
-
-allow kernel vold_prop:property_service { set };
-
-allow kernel ctl_default_prop:property_service { set };
-
-allow kernel qseecomd_prop:property_service { set };
-
-allow kernel system_prop:property_service { set };
-
-allow kernel ctl_bootanim_prop:property_service { set };
-
-allow kernel camera_prop:property_service { set };
-
-allow kernel mpdecision_prop:property_service { set };
-
-allow kernel radio_prop:property_service { set };
-
-allow kernel net_radio_prop:property_service { set };
-
 ###
 ### neverallow rules
 ###

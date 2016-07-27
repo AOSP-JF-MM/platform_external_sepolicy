@@ -436,13 +436,6 @@ allow system_server mnt_expand_file:dir r_dir_perms;
 allow system_server fingerprintd_data_file:dir { r_dir_perms remove_name rmdir relabelto write };
 allow system_server fingerprintd_data_file:file { getattr unlink };
 
-# Allow our keystore processes
-allow system_server init:keystore_key { exist };
-
-allow system_server kernel:keystore_key { exist };
-
-allow system_server kernel:debuggerd { dump_backtrace };
-
 ###
 ### Neverallow rules
 ###
