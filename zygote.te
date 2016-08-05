@@ -70,6 +70,11 @@ allow zygote zygote_exec:file rx_file_perms;
 # Needed for overlays
 allow zygote overlay_service:service_manager { find };
 
+# Our rules
+allow zygote activity_service:service_manager { find };
+allow zygote package_service:service_manager { find };
+allow zygote user_service:service_manager { find };
+
 ###
 ### neverallow rules
 ###
